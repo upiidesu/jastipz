@@ -151,86 +151,95 @@ body {
     font-weight: 500;
 }
 
+
 /* Promo Section */
 .promo {
-    margin: 2rem 7%;
+    padding: 2rem 6%;
+    color: white;
 }
+
 .promo h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text);
     text-transform: uppercase;
-    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
-.promo .promo-container {
+.promo-container {
     display: flex;
+    justify-content: center;
     gap: 1rem;
-    width: 100%;
+    flex-wrap: wrap;
 }
-.promo .promo-container .promo-item {
+
+.promo-container .promo-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     width: 18rem;
-    position: absolute;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 1rem; */
+    transition: transform 0.2s ease;
 }
-.promo .promo-container .promo-item .item-info {
+.promo-container .promo-item:hover {
+    transform: translateY(-1px);
+}
+
+.promo-item .item-info {
     display: flex;
     align-items: center;
-    background: linear-gradient(70deg, #1d4a57 15%, #5CB3CF 75%);
-    padding: .8rem;
+    gap: 1rem;
+    background: linear-gradient(70deg, #1d4a57 15%, #4f99b2 75%);
+    padding: .6rem;
     border-radius: 10px;
-    height: 5rem;
+    z-index: 1;
 }
-.promo .promo-container .promo-item .item-info img {
+.promo-item .item-info img {
+    width: 50px;
     height: 50px;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
-.promo .promo-container .promo-item .item-info .item-title {
-    margin: 1rem .5rem;
-    color: var(--bg);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
-.promo .promo-container .promo-item .item-info .item-title h2 {
+.item-info .item-details h2 {
     font-size: 1rem;
     margin: 0;
+    font-weight: 600;
 }
-.promo .promo-container .promo-item .item-info .item-title p {
-    font-size: .8rem;
-    margin: 0;
+.item-info .item-details p {
+    font-size: 0.8rem;
+    margin: 0.2rem 0 0;
+    color: #e9e9e9;
 }
 
-.promo .promo-item .item-countdown {
-    background-color: #32323E;
+.promo-item .item-bottom {
     display: flex;
-    padding: 1.4rem .8rem .5rem;
-    position: relative;
-    top: -1rem;
-    z-index: -1;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: #32323e;
+    padding: 1.6rem .8rem .8rem;
+    border-radius: 8px;
+    margin-top: -1rem;
 }
-/* Countdown */
-#countdown {
+#countdown1, #countdown2,
+#countdown3, #countdown4 {
     background-color: #ff5722;
-    border-radius: 20px;
     color: white;
-    padding-top: 1px;
-    font-size: .75rem;
-    font-family: 'Poppins', sans-serif;
+    padding: 0 1.6rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
-#countdown #time {
-    display: block;
-    padding: 2px 25px;
-    border-radius: 10px;
-    font-weight: 500;
-}
-.promo .promo-item .item-countdown p {
-    margin-left: auto;
-    margin-bottom: 0;
-    color: #4ADE80;
-    font-family: 'Poppins', sans-serif;
+.discount {
+    color: #3ad071;
     font-weight: 700;
     font-size: .8rem;
-    padding-top: 2px;
 }
+
 
 
 
