@@ -29,19 +29,29 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    bottom: 0;
+    right: 0;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2); /* Background gelap dengan opacity */
-    z-index: -1; /* Agar muncul di depan konten lain */
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: .3s ease-in;
-    display: block;
+    display: none;
 }
 .overlay.active {
-    opacity: 1;
-    z-index: 3;
+    display: block;
+    width: 100%;
+    animation: fade .3s forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -54,7 +64,7 @@ body {
     left: 0;
     right: 0;
     backdrop-filter: blur(5px);
-    z-index: 2;
+    z-index: 999;
 }
 
 .navbar .navbar-nav {
@@ -66,9 +76,10 @@ body {
     height: 100vh;
     transition: .4s;
     padding: 1.8rem 2%;
-    z-index: 4;
+    z-index: -1;
 }
 .navbar .navbar-nav.active {
+    z-index: 4;
     left: 0;
 }
 
@@ -140,6 +151,86 @@ body {
     font-weight: 500;
 }
 
+/* Promo Section */
+.promo {
+    margin: 2rem 7%;
+}
+.promo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.promo .promo-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+.promo .promo-container .promo-item {
+    width: 18rem;
+    position: absolute;
+}
+.promo .promo-container .promo-item .item-info {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(70deg, #1d4a57 15%, #5CB3CF 75%);
+    padding: .8rem;
+    border-radius: 10px;
+    height: 5rem;
+}
+.promo .promo-container .promo-item .item-info img {
+    height: 50px;
+    border-radius: 6px;
+}
+
+.promo .promo-container .promo-item .item-info .item-title {
+    margin: 1rem .5rem;
+    color: var(--bg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.promo .promo-container .promo-item .item-info .item-title h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+.promo .promo-container .promo-item .item-info .item-title p {
+    font-size: .8rem;
+    margin: 0;
+}
+
+.promo .promo-item .item-countdown {
+    background-color: #32323E;
+    display: flex;
+    padding: 1.4rem .8rem .5rem;
+    position: relative;
+    top: -1rem;
+    z-index: -1;
+    border-radius: 10px;
+}
+/* Countdown */
+#countdown {
+    background-color: #ff5722;
+    border-radius: 20px;
+    color: white;
+    padding-top: 1px;
+    font-size: .75rem;
+    font-family: 'Poppins', sans-serif;
+}
+#countdown #time {
+    display: block;
+    padding: 2px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.promo .promo-item .item-countdown p {
+    margin-left: auto;
+    margin-bottom: 0;
+    color: #4ADE80;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: .8rem;
+    padding-top: 2px;
+}
 
 
 
