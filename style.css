@@ -1,7 +1,7 @@
 :root {
     --primary: #F16A23;
     --second: #F7C942;
-    --bg: #f4f4f4;
+    --bg: #f8f8f8;
     --text: #242424;
 }
 
@@ -194,7 +194,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: linear-gradient(60deg, #ffb46f 15%, #fd7419 85%);
+    background: linear-gradient(60deg, #FFB74D 15%, #ffa600 85%);
     padding: .6rem;
     border-radius: 10px;
     z-index: 1;
@@ -226,7 +226,7 @@ body {
 }
 #countdown1, #countdown2,
 #countdown3, #countdown4 {
-    background-color: #fd7419;
+    background-color: #ff9a48;
     color: white;
     padding: 0 1.6rem;
     border-radius: 20px;
