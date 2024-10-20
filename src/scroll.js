@@ -80,8 +80,13 @@ function inertia() {
 
         // Cegah overshooting melebihi batas kanan atau kiri
         const maxScrollLeft = promoContainer.scrollWidth - promoContainer.clientWidth;
-        if (promoContainer.scrollLeft <= 0 || promoContainer.scrollLeft >= maxScrollLeft) {
-            velocity = 0;  // Berhenti di ujung konten
+
+        if (promoContainer.scrollLeft < 0) {
+            promoContainer.scrollLeft = 0; // Berhenti di ujung kiri
+            velocity = 0;
+        } else if (promoContainer.scrollLeft > maxScrollLeft) {
+            promoContainer.scrollLeft = maxScrollLeft; // Berhenti di ujung kanan
+            velocity = 0;
         }
 
         requestId = requestAnimationFrame(inertia);
