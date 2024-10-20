@@ -172,6 +172,7 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     gap: 1rem;
+    padding: .2rem;
     /* background-color: #3ad071; */
 }
 
@@ -299,7 +300,6 @@ body {
         overflow-x: auto; /* Membuat kontainer scroll secara horizontal */
         justify-content: flex-start;
         gap: 1rem;
-        padding: .2rem;
     }
 
     .promo .promo-container::-webkit-scrollbar {
