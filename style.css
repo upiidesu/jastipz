@@ -25,7 +25,7 @@ body {
 }
 
 /* Overlay */
-.overlay {
+.navbar .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@ body {
     transition: .3s ease-in;
     display: none;
 }
-.overlay.active {
+.navbar .overlay.active {
     display: block;
     width: 100%;
     animation: fade .3s forwards;
@@ -151,7 +151,7 @@ body {
     font-weight: 500;
 }
 
-
+/* ================================== */
 /* Promo Section */
 .promo {
     padding: 2rem 6%;
@@ -165,6 +165,14 @@ body {
     color: var(--text);
     text-transform: uppercase;
     margin-bottom: 1rem;
+    width: max-content;
+    position: relative;
+}
+.promo .promo-img {
+    position: absolute;
+    top: -1.3rem;
+    right: -1.3rem;
+    height: 3rem;
 }
 
 .promo-content {
@@ -179,16 +187,16 @@ body {
     gap: 1rem;
     padding: .2rem;
     -webkit-overflow-scrolling: touch;
+    justify-content: stretch;
 }
 
 .promo-container .promo-item {
-    width: 18rem;
+    width: 100%;
     text-decoration: none;
     border-radius: 10px;
     color: var(--bg);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: transform 0.2s ease;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
@@ -246,6 +254,10 @@ body {
     font-size: .8rem;
     text-shadow: none;
 }
+
+/* =========================== */
+/* Product Section */
+
 
 
 
@@ -312,7 +324,7 @@ body {
     }
 
     .promo .promo-container .promo-item {
-        min-width: 60%; /* Ukuran lebih kecil untuk item di layar tablet */
+        max-width: 60%; /* Ukuran lebih kecil untuk item di layar tablet */
         flex-shrink: 0; /* Mencegah item mengecil secara otomatis */
     }
 
