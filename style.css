@@ -22,7 +22,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg) !important;
     color: var(--text);
-    min-height: 5000px;
+    min-height: 800px;
 }
 
 /* Overlay */
