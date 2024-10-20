@@ -289,5 +289,36 @@ body {
         display: none;
     }
 
+    .promo {
+        padding: 2rem 3%;
+    }
 
+    .promo .promo-container {
+        display: flex;
+        overflow-x: auto; /* Membuat kontainer scroll secara horizontal */
+        flex-wrap: nowrap; /* Mencegah item wrap agar tetap satu baris */
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: .2rem;
+    }
+
+    .promo .promo-container::-webkit-scrollbar {
+        display: none; /* Hilangkan scrollbar pada Chrome */
+    }
+
+    .promo .promo-container .promo-item {
+        min-width: 60%; /* Ukuran lebih kecil untuk item di layar tablet */
+        flex-shrink: 0; /* Mencegah item mengecil secara otomatis */
+    }
+
+    .promo h1 {
+        font-size: 1.3rem; /* Sesuaikan ukuran judul di layar kecil */
+    }
+
+}
+
+@media (max-width: 568px) {
+    html {
+        font-size: 55%;
+    }
 }

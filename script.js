@@ -49,3 +49,36 @@ startCountdown(targetTime1, 'countdown1', 'time1');
 startCountdown(targetTime2, 'countdown2', 'time2');
 startCountdown(targetTime3, 'countdown3', 'time3');
 startCountdown(targetTime4, 'countdown4', 'time4');
+
+
+// Horizontal Scroll Bar
+const promoContainer = document.querySelector('.promo-container');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+// Ketika mouse ditekan di area kontainer
+promoContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - promoContainer.offsetLeft;  // Posisi awal mouse
+    scrollLeft = promoContainer.scrollLeft;  // Posisi awal scroll
+});
+
+// Ketika mouse dilepas
+promoContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+// Ketika mouse dilepas di dalam area kontainer
+promoContainer.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+// Ketika mouse digerakkan saat ditekan (dragging)
+promoContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;  // Hanya berfungsi jika mouse ditekan
+    e.preventDefault();  // Cegah default behavior
+    const x = e.pageX - promoContainer.offsetLeft;  // Hitung pergeseran mouse
+    const walk = (x - startX);  // Seberapa jauh kontainer harus bergeser (percepat 2x)
+    promoContainer.scrollLeft = scrollLeft - walk;  // Set scroll position baru
+});
