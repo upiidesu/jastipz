@@ -52,15 +52,20 @@ function dragging(e) {
     velocity = (e.pageX || e.touches[0].pageX) - lastMoveX;
     lastMoveX = e.pageX || e.touches[0].pageX;
 
+    // Deteksi jika berada di batas kiri
     if (promoContainer.scrollLeft <= 0 && walk > 0) {
         isAtEdge = true;
         movementBeyondEdge = walk * 0.2;
         promoContainer.style.transform = `translateX(${movementBeyondEdge}px)`;
-    } else if (promoContainer.scrollLeft >= maxScrollLeft && walk < 0) {
+    }
+    // Deteksi jika berada di batas kanan (pastikan toleransi kecil untuk inertia)
+    else if (promoContainer.scrollLeft >= maxScrollLeft && walk < 0) {
         isAtEdge = true;
         movementBeyondEdge = walk * 0.2;
         promoContainer.style.transform = `translateX(${movementBeyondEdge}px)`;
-    } else {
+    }
+    // Normal scrolling jika di antara batas
+    else {
         promoContainer.scrollLeft = scrollLeft - walk;
         promoContainer.style.transform = 'translateX(0px)';
         isAtEdge = false;
@@ -72,6 +77,13 @@ function inertia() {
     if (Math.abs(velocity) > 0.5) {
         promoContainer.scrollLeft -= velocity;
         velocity *= 0.95;
+
+        // Cegah overshooting melebihi batas kanan atau kiri
+        const maxScrollLeft = promoContainer.scrollWidth - promoContainer.clientWidth;
+        if (promoContainer.scrollLeft <= 0 || promoContainer.scrollLeft >= maxScrollLeft) {
+            velocity = 0;  // Berhenti di ujung konten
+        }
+
         requestId = requestAnimationFrame(inertia);
     }
 }
