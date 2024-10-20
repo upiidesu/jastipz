@@ -167,13 +167,17 @@ body {
     margin-bottom: 1rem;
 }
 
+.promo-content {
+    /* background-color: #F16A23; */
+    overflow: hidden;
+}
+
 .promo-container {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 1rem;
     padding: .2rem;
-    /* background-color: #3ad071; */
 }
 
 .promo-container .promo-item {
