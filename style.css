@@ -169,9 +169,10 @@ body {
 
 .promo-container {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
+    /* background-color: #3ad071; */
 }
 
 .promo-container .promo-item {
@@ -296,7 +297,6 @@ body {
     .promo .promo-container {
         display: flex;
         overflow-x: auto; /* Membuat kontainer scroll secara horizontal */
-        flex-wrap: nowrap; /* Mencegah item wrap agar tetap satu baris */
         justify-content: flex-start;
         gap: 1rem;
         padding: .2rem;

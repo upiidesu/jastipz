@@ -54,6 +54,7 @@ startCountdown(targetTime4, 'countdown4', 'time4');
 
 // Horizontal Scroll Bar
 const promoContainer = document.querySelector('.promo-container');
+// 'let' itu tidak wajib diinisialisasi saat deklarasi (tidak harus selalu ada nilai di awal)
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -63,12 +64,11 @@ let lastMoveX = 0; // Posisi X terakhir untuk menghitung kecepatan
 let velocity = 0; // Kecepatan terakhir saat mouse dilepas
 let requestId; // Untuk animasi inertia
 
-// Ketika mouse ditekan di area kontainer
+// Ketika mouse ditekan di area item-container
 promoContainer.addEventListener('mousedown', (e) => {
     isDown = true;
     startX = e.pageX - promoContainer.offsetLeft;
     scrollLeft = promoContainer.scrollLeft;
-    promoContainer.classList.add('active');
     isAtEdge = false;
     movementBeyondEdge = 0;
     lastMoveX = e.pageX; // Catat posisi mouse saat ditekan
