@@ -428,6 +428,11 @@ body {
         font-size: 55%;
     }
 
+    #countdown1, #countdown2,
+    #countdown3, #countdown4 {
+        padding: .1rem 1.6rem 0;
+    }
+
     .product .product-row .product-item {
         flex: 1 1 13rem;
     }
