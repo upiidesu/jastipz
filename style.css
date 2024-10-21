@@ -344,6 +344,17 @@ body {
 
 
 /* Query */
+/* Desktop */
+@media (min-width: 1400) {
+    html {
+        font-size: 110%;
+    }
+
+    .product .product-row .product-item {
+        flex: 1 1 18rem;
+    }
+}
+
 /* Tablet */
 @media (max-width: 758px) {
     html {
@@ -447,6 +458,6 @@ body {
     }
 
     .product .product-row .product-item .overlay p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
