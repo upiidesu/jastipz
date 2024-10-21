@@ -417,10 +417,18 @@ body {
         padding: 0 3%;
     }
 
+    .product .product-row .product-item {
+        flex: 1 1 15rem;
+    }
+
 }
 
 @media (max-width: 568px) {
     html {
         font-size: 55%;
+    }
+
+    .product .product-row .product-item {
+        flex: 1 1 13rem;
     }
 }
