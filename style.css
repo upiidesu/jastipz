@@ -330,6 +330,7 @@ body {
     flex-direction: column;
     position: absolute;
     bottom: 0;
+    left: .7rem;
 }
 .product .product-row .product-item .overlay h3 {
     font-size: 1rem;
