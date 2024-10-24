@@ -151,12 +151,11 @@ body {
     font-weight: 500;
 }
 
-/* ================================== */
+/* ====================================================== */
 /* Promo Section */
 .promo {
-    padding: 2rem 6%;
+    padding: 7rem 6% 2rem;
     color: white;
-    margin-top: 4.5rem;
 }
 
 .promo h1 {
@@ -255,7 +254,7 @@ body {
     text-shadow: none;
 }
 
-/* =========================== */
+/* ============================================== */
 /* Product Section */
 .product {
     padding: 0 6%;
@@ -340,6 +339,7 @@ body {
     font-size: .8rem;
 }
 
+/* ================================================== */
 /* Footer */
 footer {
     background-color: #f1f1f1;
@@ -421,7 +421,7 @@ footer .container .content .links .contact .sosmed-logo {
 footer .container .content .links .contact .sosmed-logo a {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: white;
+    background-color: var(--bg);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -615,6 +615,10 @@ footer .container .copyright span {
 @media (max-width: 568px) {
     html {
         font-size: 55%;
+    }
+
+    .promo {
+        padding-top: 3rem;
     }
 
     #countdown1, #countdown2,
