@@ -3,17 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacoan</title>
+    <title>Jastipz</title>
+    <link rel="icon" href="img/thumb.png" type="image/png">
+    <link rel="stylesheet" href="../navbar-footer.css">
 
-    <style>
-        h1 {
-            text-align: center;
-            color: red;
-            text-transform: uppercase;
-        }
-    </style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FEATHER ICONS -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- AlpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Mie Gacoan</h1>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Nav Link -->
+            <div class="navbar-nav">
+                <a href="../index.html"><img src="../img/logo.png" alt="Jastipz"></a>
+                <div class="navbar-link">
+                    <a href="#home"><i data-feather="home"></i><span>Beranda</span></a>
+                    <a href="#shop"><i data-feather="grid"></i><span>Semua Toko</span></a>
+                    <a href="#log-in"><i data-feather="log-in"></i><span>Masuk</span></a>
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <!-- Toggler -->
+                <a href="#" id="hamburger">
+                    <i data-feather="menu"></i>
+                </a>
+                <a href="#">
+                    <img src="../img/logo.png" alt="Jastipz" width="100">
+                </a>
+                <p>Website Jastip Tercepat Dan Terpercaya Di Indonesia.</p>
+            </div>
+            <!-- Login Register -->
+            <div class="login-register">
+                <a href="#" class="login-icon">
+                    <i data-feather="log-in"></i>
+                </a>
+                <!-- Login -->
+                <a href="#">Masuk</a>
+                <span>/</span>
+                <a href="#">Daftar</a>
+            </div>
+        </div>
+        <!-- Overlay -->
+        <div class="overlay"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Deskripsi -->
+                <div class="description">
+                    <img src="../img/logo.png" alt="Jastipz">
+                    <p>Jastip makanan atau minuman di <span>Jastipz</span> agar menunggu lebih cepat dan efisien. Pengiriman cepat dan berbagai metode pembayaran yang lengkap. Tersedia berbagai macam produk populer seperti Mie Gacoan, Wedrink, Wizzmie, Mixue, A&W, Janji Jiwa, Pizza Hut, Street Boba, Geprek Bensu, Kokumi, Burger King, Kopi Kenangan dan berbagai produk lainnya yang tidak kalah populer untuk kamu coba.</p>
+                </div>
+                <!-- Content -->
+                <div class="content">
+                    <!-- Links -->
+                    <div class="links">
+                        <!-- Peta Situs -->
+                        <div class="sitemap">
+                            <h3>Peta Situs</h3>
+                            <a href="#">Beranda</a>
+                            <a href="#">Semua Produk</a>
+                            <a href="#">Masuk</a>
+                            <a href="#">Daftar</a>
+                        </div>
+                        <!-- Produk Lainnya -->
+                        <div class="other">
+                            <h3>Produk Lainnya</h3>
+                            <a href="#">Mie Gacoan</a>
+                            <a href="#">Wedrink</a>
+                            <a href="#">Wizzmie</a>
+                            <a href="#">Mixue</a>
+                        </div>
+                        <!-- Kontak -->
+                        <div class="contact">
+                            <h3>Ikuti Kami</h3>
+                            <div class="sosmed-logo">
+                                <a href="#"><i data-feather="instagram"></i></a>
+                                <a href="#"><i data-feather="youtube"></i></a>
+                                <a href="#"><i data-feather="twitter"></i></a>
+                            </div>
+                            <h3>Pertanyaan Bisnis</h3>
+                            <p>jastipz@gmail.com</p>
+                        </div>
+                    </div>
+                    <!-- Metode Pembayaran -->
+                    <div class="payment">
+                        <h3>Metode Pembayaran</h3>
+                        <div class="payment-wrapper">
+                            <div class="payment-list">
+                                <img src="../img/payment/bca.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/bri.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/bni.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/mandiri.webp" alt="" class="payment-item">
+                                <img src="../img/payment/cimb.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/alfa.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/indo.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/qris.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/dana.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/gopay.webp"   alt="" class="payment-item">
+                                <img src="../img/payment/ovo.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/visa.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/master-card.webp" alt="" class="payment-item">
+                            </div>
+
+                            <div class="payment-list">
+                                <img src="../img/payment/bca.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/bri.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/bni.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/mandiri.webp" alt="" class="payment-item">
+                                <img src="../img/payment/cimb.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/alfa.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/indo.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/qris.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/dana.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/gopay.webp"   alt="" class="payment-item">
+                                <img src="../img/payment/ovo.webp"     alt="" class="payment-item">
+                                <img src="../img/payment/visa.webp"    alt="" class="payment-item">
+                                <img src="../img/payment/master-card.webp" alt="" class="payment-item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hak Cipta -->
+            <div class="copyright">
+                <h3>&copy;2024 Jastipz. Semua Hak Cipta</h3>
+                <a href="#">Tentang Kami</a>
+                <span>|</span>
+                <a href="#">Syarat & Ketentuan Pengguna</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- FEATHER ICONS -->
+    <script>
+        feather.replace();
+    </script>
+    
+    <!-- AlpineJS -->
+    <script src="../src/app.js" defer></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: false, // Menonaktifkan efek kursor "grab"
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: "auto",
+            allowTouchMove: true, // Menonaktifkan interaksi geser manual
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 3000, // Interval waktu slide otomatis (dalam milidetik)
+                disableOnInteraction: false, // Slide tidak berhenti saat pengguna berinteraksi
+            }
+        });
+    </script>
+
+    <!-- JS Gueh -->
+    <script src="../script.js" defer></script>
+    <script src="../src/scroll.js" defer></script>
+
 </body>
 </html>
