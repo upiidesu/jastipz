@@ -49,11 +49,3 @@ startCountdown(targetTime1, 'countdown1', 'time1');
 startCountdown(targetTime2, 'countdown2', 'time2');
 startCountdown(targetTime3, 'countdown3', 'time3');
 startCountdown(targetTime4, 'countdown4', 'time4');
-
-//  ================================================================== //
-// Auto Slide
-$(document).ready(function(){
-    $('.carousel').carousel({
-        indicators: true
-    });
-});

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jastipz</title>
-    <link rel="icon" href="img/thumb.png" type="image/png">
+    <link rel="icon" href="../img/thumb.png" type="image/png">
     <link rel="stylesheet" href="../navbar-footer.css">
 
     <!-- Fonts -->
@@ -27,7 +27,7 @@
         <div class="navbar-container">
             <!-- Nav Link -->
             <div class="navbar-nav">
-                <a href="../index.html"><img src="../img/logo.png" alt="Jastipz"></a>
+                <a href="https://upiidesu.github.io/jastipz"><img src="../img/logo.png" alt="Jastipz"></a>
                 <div class="navbar-link">
                     <a href="#home"><i data-feather="home"></i><span>Beranda</span></a>
                     <a href="#shop"><i data-feather="grid"></i><span>Semua Toko</span></a>
@@ -163,32 +163,25 @@
     <!-- AlpineJS -->
     <script src="../src/app.js" defer></script>
 
-    <!-- Initialize Swiper -->
+    <!-- JS Gueh -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: false, // Menonaktifkan efek kursor "grab"
-            centeredSlides: true,
-            loop: true,
-            slidesPerView: "auto",
-            allowTouchMove: true, // Menonaktifkan interaksi geser manual
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            autoplay: {
-                delay: 3000, // Interval waktu slide otomatis (dalam milidetik)
-                disableOnInteraction: false, // Slide tidak berhenti saat pengguna berinteraksi
+        const navbarNav = document.querySelector('.navbar-nav');
+        const overlay = document.querySelector('.overlay')
+        // Saat hamburger menu di klik, muncul sidebar
+        document.querySelector('#hamburger').onclick = (e) => {
+            navbarNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            e.preventDefault();
+        };
+        // Klik diluar sidebar untuk menghilangkannya
+        const hamburger = document.querySelector('#hamburger');
+        document.addEventListener('click', function(e) {
+            if(!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+                navbarNav.classList.remove('active');
+                overlay.classList.remove('active');
             }
         });
     </script>
-
-    <!-- JS Gueh -->
-    <script src="../script.js" defer></script>
-    <script src="../src/scroll.js" defer></script>
 
 </body>
 </html>
