@@ -22,7 +22,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg) !important;
     color: var(--text);
-    padding-top: 6rem;
+    padding-top: 5.2rem;
 }
 
 /* Overlay */
@@ -141,7 +141,6 @@ body {
 
 .navbar .navbar-container .login-register {
     /* margin-left: auto; */
-    margin-left: 1rem;
     display: flex;
     align-items: center;
 }
@@ -155,9 +154,14 @@ body {
 
 .navbar .navbar-container .cart {
     margin-left: auto;
-    /* margin-left: 1rem; */
+    margin-right: 1rem;
     color: var(--text);
+    transition: .1s;
 }
+.navbar .navbar-container .cart:hover {
+    color: var(--primary);
+}
+
 /* ======================================================= */
 /* Product Section */
 .product {
@@ -332,11 +336,11 @@ body {
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: -0.2rem;
+    bottom: -0.3rem;
     width: 100%;
 }
 .product .product-item .container .card .card-detail .detail-price p {
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 500;
     color: #e1521e;
 }
@@ -593,9 +597,10 @@ footer .container .copyright span {
         gap: .6rem;
     }
 
-    .product .row .product-item .card img {
-        width: 5rem;
-        height: 5rem;
+    .product .product-item .container .card img {
+        width: 6rem;
+        height: 6rem;
+        margin-right: .8rem;
     }
 
     .product .product-item .container .card .card-detail h4 {
@@ -607,7 +612,7 @@ footer .container .copyright span {
     }
 
     .product .product-item .container .card .card-detail .detail-price p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .product .product-item .container .card .card-detail .detail-price span {
         padding: .1rem;
@@ -643,7 +648,6 @@ footer .container .copyright span {
         width: 1.5rem;
         height: 1.5rem;
     }
-
 }
 
 @media (max-width: 568px) {
@@ -674,13 +678,16 @@ footer .container .copyright span {
         margin: 0;
         min-width: 100%;
     }
+    .product .product-item .container h3 {
+        font-size: 1.4rem;
+    }
 
     .product .product-item .container .card-container {
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     }
 
     .product .product-item .container .card .card-detail .detail-price p {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .product .product-item .container .card .card-detail .detail-price span {
