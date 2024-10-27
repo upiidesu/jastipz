@@ -585,10 +585,12 @@ footer .container .copyright span {
     .product .product-item .container {
         margin: 0;
         min-width: 100%;
+        gap: .6rem;
     }
 
     .product .product-item .container .card-container {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+        gap: .6rem;
     }
 
     .product .row .product-item .card img {
@@ -603,12 +605,15 @@ footer .container .copyright span {
     .product .product-item .container .card .card-detail p {
         font-size: .8rem;
     }
+
+    .product .product-item .container .card .card-detail .detail-price p {
+        font-size: 1rem;
+    }
     .product .product-item .container .card .card-detail .detail-price span {
         padding: .1rem;
         box-sizing: content-box;
     }
 
-    
 
 
 
