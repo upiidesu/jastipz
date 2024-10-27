@@ -338,6 +338,7 @@ body {
 .product .product-item .container .card .card-detail .detail-price p {
     font-size: .8rem;
     font-weight: 500;
+    color: #e1521e;
 }
 .product .product-item .container .card .card-detail .detail-price span {
     width: 1.1rem;
