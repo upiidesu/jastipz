@@ -792,6 +792,7 @@ footer .container .copyright span {
     
     .navbar .shopping-cart {
         width: 30rem;
+        padding-bottom: 7rem;
     }
 
     .shopping-cart .cart-item img {
