@@ -28,3 +28,40 @@ document.addEventListener('click', function(e) {
         shoppingCart.classList.remove('active');
     }
 });
+
+// Notif Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const plusElements = document.querySelectorAll('.plus');
+    const notifAnimation = document.querySelector('.notif-animation');
+    const notif = document.querySelector('.notif');
+
+    plusElements.forEach(plus => {
+        plus.addEventListener('click', function(e) {
+            // Reset posisi awal dan visibilitas animasi
+            notifAnimation.style.transition = 'none';
+            notifAnimation.style.bottom = '-2rem';
+            notifAnimation.style.opacity = '0';
+
+            // Paksa reflow untuk memulai ulang animasi
+            notifAnimation.offsetHeight;
+
+            // Mulai animasi
+            notifAnimation.style.transition = 'bottom 0.3s ease, opacity 0.3s ease';
+            notifAnimation.style.bottom = '-0.1rem';
+            notifAnimation.style.opacity = '1';
+
+            // Sembunyikan animasi setelah selesai
+            setTimeout(() => {
+                notif.style.opacity = '1';
+                
+                // Reset elemen setelah delay sesuai durasi animasi
+                setTimeout(() => {
+                    notifAnimation.style.transition = 'none';
+                    notifAnimation.style.bottom = '-2rem';
+                    notifAnimation.style.opacity = '0';
+                }, 25);
+            }, 225);
+        });
+    });
+});
+

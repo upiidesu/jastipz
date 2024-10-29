@@ -46,7 +46,11 @@
                 </a>
                 <p>Jasa Titip Terpercaya Untuk Semua Kebutuhan Tren Anda.</p>
             </div>
-            <a href="#" class="cart" id="cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="cart" id="cart" x-data>
+                <i data-feather="shopping-cart"></i>
+                <span class="notif-animation"></span>
+                <span class="notif" x-text="$store.cart.quantity" x-show="$store.cart.quantity"></span>
+            </a>
             <!-- Login Register -->
             <div class="login-register">
                 <a href="#" class="login-icon">
@@ -128,7 +132,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
@@ -150,7 +154,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
@@ -172,7 +176,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
@@ -194,7 +198,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
@@ -216,7 +220,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
@@ -238,7 +242,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
@@ -260,7 +264,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
@@ -282,7 +286,7 @@
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
                                         <p x-text="rupiah(item.price)"></p>
-                                        <span>
+                                        <span @click="$store.cart.add(item)" class="plus">
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
