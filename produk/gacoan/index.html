@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jastipz</title>
-    <link rel="icon" href="../img/thumb.png" type="image/png">
+    <link rel="icon" href="../../img/thumb.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 
     <!-- Fonts -->
@@ -28,7 +28,7 @@
         <div class="navbar-container">
             <!-- Nav Link -->
             <div class="navbar-nav">
-                <a href="../index.html"><img src="../img/logo.png" alt="Jastipz" width="300"></a>
+                <a href="../../index.html"><img src="../../img/logo.png" alt="Jastipz" width="300"></a>
                 <div class="navbar-link">
                     <a href="#home"><i data-feather="home"></i><span>Beranda</span></a>
                     <a href="#shop"><i data-feather="grid"></i><span>Semua Toko</span></a>
@@ -41,25 +41,41 @@
                 <a href="#" id="hamburger">
                     <i data-feather="menu"></i>
                 </a>
-                <a href="../index.html">
-                    <img src="../img/logo.png" alt="Jastipz" width="100">
+                <a href="../../index.html">
+                    <img src="../../img/logo.png" alt="Jastipz" width="100">
                 </a>
                 <p>Jasa Titip Terpercaya Untuk Semua Kebutuhan Tren Anda.</p>
             </div>
-            <a href="#" class="cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="cart" id="cart"><i data-feather="shopping-cart"></i></a>
             <!-- Login Register -->
             <div class="login-register">
                 <a href="#" class="login-icon">
                     <i data-feather="log-in"></i>
                 </a>
                 <!-- Login -->
-                <a href="#">Masuk</a>
-                <span>/</span>
-                <a href="#">Daftar</a>
+                <div class="login-container">
+                    <div class="login-text">
+                        <a href="#">Masuk</a>
+                        <a href="#">Daftar</a>
+                    </div>
+                </div>
             </div>
         </div>
+
         <!-- Overlay -->
         <div class="overlay"></div>
+
+        <!-- Shopping Cart -->
+        <div class="shopping-cart">
+            <div class="cart-item">
+                <p>Masih Kosong Jir Sabar</p>
+                <!-- <img src="img/gacoan.jpeg" alt="">
+                <div class="item-detail">
+                    <h3>Produk 1</h3>
+                    <p>Item Price: 30K</p>
+                </div> -->
+            </div>
+        </div>
     </nav>
     <!-- Navbar End -->
 
@@ -72,7 +88,7 @@
                     <!-- Detail Atas -->
                     <div class="detail-top">
                         <div class="title">
-                            <img src="../img/promo-img/gacoan.webp" alt="Mie Gacoan">
+                            <img src="../../img/promo-img/gacoan.webp" alt="Mie Gacoan">
                             <p>Mie Gacoan</p>
                         </div>
                         <div class="icons">
@@ -111,10 +127,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>
@@ -133,10 +149,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>
@@ -155,10 +171,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>
@@ -177,10 +193,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>
@@ -199,10 +215,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>
@@ -221,10 +237,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>
@@ -243,10 +259,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>
@@ -265,10 +281,10 @@
                                     <h4 x-text="item.name"></h4>
                                     <p>Disukai sebanyak <span x-text="item.likes"></span></p>
                                     <div class="detail-price">
-                                        <p x-text="item.price"></p>
+                                        <p x-text="rupiah(item.price)"></p>
                                         <span>
                                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../img/feather-sprite.svg#plus" />
+                                                <use href="../../img/feather-sprite.svg#plus" />
                                             </svg>
                                         </span>
                                     </div>

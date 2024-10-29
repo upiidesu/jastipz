@@ -140,9 +140,10 @@ body {
 }
 
 .navbar .navbar-container .login-register {
-    /* margin-left: auto; */
+    margin-right: 1rem;
     display: flex;
     align-items: center;
+    position: relative;
 }
 .navbar .navbar-container .login-register a {
     text-decoration: none;
@@ -150,6 +151,56 @@ body {
     color: var(--text);
     font-size: 1rem;
     font-weight: 500;
+}
+
+.navbar .navbar-container .login-register:hover .login-text {
+    display: flex;
+    animation: scaleY .3s backwards;
+}
+
+.navbar .navbar-container .login-register .login-container {
+    position: absolute;
+    top: 2.15rem;
+    right: -5.4rem;
+    padding-top: 1rem;
+}
+
+.navbar .navbar-container .login-register .login-text {
+    transform-origin: top;
+    transition: .2s;
+    background-color: #dbdbdb;
+    display: none;
+    padding: .75rem;
+    border-radius: 0 0 .6rem .6rem;
+}
+@keyframes scaleY {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.navbar .navbar-container .login-register .login-text a {
+    display: inline-block;
+    font-size: .9rem;
+    color: var(--bg);
+    padding: .3rem 1.5rem;
+    background-color: #F16A23;
+    margin: 0;
+    border-radius: .4rem 0 0 .4rem;
+    transition: .2s;
+}
+.navbar .navbar-container .login-register .login-text a:hover {
+    background-color: #e16421;
+}
+.navbar .navbar-container .login-register .login-text a:nth-child(2) {
+    background-color: #707FEB;
+    border-radius: 0 .4rem .4rem 0;
+}
+.navbar .navbar-container .login-register .login-text a:nth-child(2):hover {
+    background-color: #6a77da;
 }
 
 .navbar .navbar-container .cart {
@@ -160,6 +211,31 @@ body {
 }
 .navbar .navbar-container .cart:hover {
     color: var(--primary);
+}
+
+.navbar .shopping-cart {
+    position: absolute;
+    top: 101%;
+    right: -100%;
+    height: 100vh;
+    width: 25rem;
+    padding: 1rem 1.5rem;
+    color: var(--text);
+    background-color: var(--bg);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+.navbar .shopping-cart img {
+    height: 5rem;
+}
+.navbar .shopping-cart p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar .shopping-cart.active {
+    right: 0;
 }
 
 /* ======================================================= */

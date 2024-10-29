@@ -33,7 +33,7 @@ document.addEventListener('alpine:init', () => {
         ],
 
         dimsum: [
-            { id: 1, name: 'Pangsit Goreng', likes: '291', img: 'pangsit-goreng.jpeg', price: 13000 },
+            { id: 1, name: 'Pangsit Goreng', likes: '291', img: 'pangsit-goreng.jpeg', price: 14000 },
             { id: 2, name: 'Lumpia Udang', likes: '659', img: 'lumpia-udang.jpeg', price: 13000 },
             { id: 3, name: 'Udang Keju', likes: '1,7RB', img: 'udang-keju.jpeg', price: 13000 },
             { id: 4, name: 'Udang Rambutan', likes: '871', img: 'udang-rambutan.jpeg', price: 13000 },
@@ -42,20 +42,34 @@ document.addEventListener('alpine:init', () => {
 
         esBuah: [
             { id: 1, name: 'Es Petak Umpet', likes: '35', img: 'petak-umpet.jpeg', price: 13000 },
-            { id: 2, name: 'Es Sluku Bathok', likes: '69', img: 'sluku-bathok.jpeg', price: 13000 },
-            { id: 3, name: 'Es Teklek', likes: '64', img: 'teklek.jpeg', price: 13000 },
+            { id: 2, name: 'Es Sluku Bathok', likes: '69', img: 'sluku-bathok.jpeg', price: 10000 },
+            { id: 3, name: 'Es Teklek', likes: '64', img: 'teklek.jpeg', price: 10000 },
             { id: 4, name: 'Es Gobak Sodor', likes: '217', img: 'gobak-sodor.jpeg', price: 13000 },
         ],
 
         beverages: [
-            { id: 1, name: 'Es Teh', likes: '195', img: 'teh.jpeg', price: 13000 },
-            { id: 2, name: 'Orange', likes: '67', img: 'orange.jpeg', price: 13000 },
-            { id: 3, name: 'Lemon Tea', likes: '118', img: 'lemon-tea.jpeg', price: 13000 },
-            { id: 4, name: 'Teh Tarik', likes: '23', img: 'teh-tarik.jpeg', price: 13000 },
-            { id: 5, name: 'Chocoan Ice', likes: '38', img: 'chocoan-ice.jpeg', price: 13000 },
-            { id: 6, name: 'Vanilla Latte', likes: '26', img: 'vanilla-latte.jpeg', price: 13000 },
-            { id: 7, name: 'Thai Tea', likes: '223', img: 'thai-tea-ori.jpeg', price: 13000 },
-            { id: 8, name: 'Green Thai Tea', likes: '162', img: 'green-thai-tea.jpeg', price: 13000 },
+            { id: 1, name: 'Es Teh', likes: '195', img: 'teh.jpeg', price: 7000 },
+            { id: 2, name: 'Orange', likes: '67', img: 'orange.jpeg', price: 9000 },
+            { id: 3, name: 'Lemon Tea', likes: '118', img: 'lemon-tea.jpeg', price: 11000 },
+            { id: 4, name: 'Teh Tarik', likes: '23', img: 'teh-tarik.jpeg', price: 11000 },
+            { id: 5, name: 'Chocoan Ice', likes: '38', img: 'chocoan-ice.jpeg', price: 12000 },
+            { id: 6, name: 'Vanilla Latte', likes: '26', img: 'vanilla-latte.jpeg', price: 12000 },
+            { id: 7, name: 'Thai Tea', likes: '223', img: 'thai-tea-ori.jpeg', price: 12000 },
+            { id: 8, name: 'Green Thai Tea', likes: '162', img: 'green-thai-tea.jpeg', price: 12000 },
         ],
     }));
+
+    Alpine.store('cart', {
+        items: []
+    });
 });
+
+
+// Konversi ke Rupiah
+const rupiah = (number) => {
+    return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0,
+    }).format(number);
+}
