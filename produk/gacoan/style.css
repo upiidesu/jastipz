@@ -224,6 +224,7 @@ body {
     padding-right: 1px;
     text-align: center;
     font-size: .6rem;
+    font-weight: 500;
     right: -.5rem;
     bottom: -.1rem;
     background-color: red;
@@ -667,9 +668,12 @@ footer .container .copyright span {
 
     .navbar .navbar-container .cart span.notif,
     .navbar .navbar-container .cart span.notif-animation {
-        height: 1rem;
-        width: 1rem;
+        height: 1.1rem;
+        width: 1.1rem;
         padding-top: 1px;
+        padding-left: 1px;
+        font-size: .7rem;
+        font-weight: 600;
     }
 
     /* Product */
@@ -764,7 +768,7 @@ footer .container .copyright span {
     .navbar .navbar-container .cart span.notif-animation {
         height: 1.2rem;
         width: 1.2rem;
-        padding-left: 1px;git 
+        padding-left: 1px;
         font-weight: 700;
         font-size: .8rem;
     }
