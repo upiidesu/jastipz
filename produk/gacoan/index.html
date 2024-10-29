@@ -70,14 +70,46 @@
         <div class="overlay"></div>
 
         <!-- Shopping Cart -->
-        <div class="shopping-cart">
-            <div class="cart-item">
-                <p>Masih Kosong Jir Sabar</p>
-                <!-- <img src="img/gacoan.jpeg" alt="">
-                <div class="item-detail">
-                    <h3>Produk 1</h3>
-                    <p>Item Price: 30K</p>
-                </div> -->
+        <div class="shopping-cart" x-data>
+            <template x-for="(item, index) in $store.cart.items" :key="index">
+                <div class="cart-item">
+                    <img :src="`img/${item.img}`" :alt="item.name">
+                    <div class="item-detail">
+                        <h3 x-text="item.name"></h3>
+                        <div class="item-price">
+                            <span x-text="rupiah(item.price)"></span> &times; 
+                            <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+                            <span x-text="item.quantity"></span>
+                            <button id="add" @click="$store.cart.add(item)">&plus;</button> &equals;
+                            <span x-text="rupiah(item.total)"></span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <h4 x-show="!$store.cart.items.length">Cart is Empty</h4>
+            <h4 x-show="$store.cart.items.length">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+            <div class="form-container" x-show="$store.cart.items.length"> 
+                <form action="" id="checkoutForm">
+                    <h5>Customer Detail</h5>
+
+                    <label for="name">
+                        <span>Nama</span>
+                        <input type="text" name="name" id="name" autocomplete="off">
+                    </label>
+
+                    <label for="email">
+                        <span>Email</span>
+                        <input type="email" name="email" id="email">
+                    </label>
+
+                    <label for="phone">
+                        <span>No Hp</span>
+                        <input type="number" name="phone" id="phone" autocomplete="off">
+                    </label>
+
+                    <button class="checkoutBtn" type="submit" id="checkoutBtn" value="checkout">Checkout</button>
+                </form>
             </div>
         </div>
     </nav>
