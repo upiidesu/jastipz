@@ -764,9 +764,9 @@ footer .container .copyright span {
     .navbar .navbar-container .cart span.notif-animation {
         height: 1.2rem;
         width: 1.2rem;
-        padding-top: 2px;
-        padding-left: 1px;
+        padding-left: 1px;git 
         font-weight: 700;
+        font-size: .8rem;
     }
 
     .product {
