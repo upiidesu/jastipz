@@ -363,6 +363,7 @@ body {
     border-radius: 5px;
     font-size: .8rem;
 }
+
 .form-container .checkoutBtn {
     padding: .3rem 1.3rem;
     background-color: var(--primary);
@@ -372,6 +373,10 @@ body {
     border-radius: .8rem;
     margin: 1rem auto;
     cursor: pointer;
+}
+.form-container .checkoutBtn.disabled {
+    background-color: #969696;
+    cursor: default;
 }
 
 /* ======================================================= */
