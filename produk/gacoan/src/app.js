@@ -155,8 +155,10 @@ checkoutBtn.addEventListener('click', function(e) {
     const objData = Object.fromEntries(data);
     const message = formatMessage(objData);
     
-    console.log(objData);
-    window.open('http://wa.me/6281222865525?text=' + encodeURIComponent(message));
+    window.open('http://wa.me/6281224238689?text=' + encodeURIComponent(message));
+    form.reset();
+    checkoutBtn.disabled = true;
+    checkoutBtn.classList.add('disabled');
 });
 
 // Format pesan WhatsApp
@@ -165,8 +167,9 @@ const formatMessage = (obj) => {
         Nama: ${obj.name}
         Email: ${obj.email}
         No. HP: ${obj.phone}
-    Data Pesanan
+
+Data Pesanan
         ${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`)}
-    TOTAL: ${rupiah(obj.total)}
-    Terima kasih.`;
+TOTAL: ${rupiah(obj.total)}
+Terima kasih.`;
 }
