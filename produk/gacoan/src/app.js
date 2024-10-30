@@ -163,13 +163,13 @@ checkoutBtn.addEventListener('click', function(e) {
 
 // Format pesan WhatsApp
 const formatMessage = (obj) => {
-    return `Data Customer
-        Nama: ${obj.name}
-        Email: ${obj.email}
-        No. HP: ${obj.phone}
+    return `*Data Customer:*
+Nama :  ${obj.name}
+Email :  ${obj.email}
+No. HP :  ${obj.phone}
 
-Data Pesanan
-        ${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`)}
-TOTAL: ${rupiah(obj.total)}
+*Data Pesanan:*
+${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.price)}) = *${rupiah(item.total)}* \n`).join('')}
+*TOTAL :  ${rupiah(obj.total)}*
 Terima kasih.`;
-}
+};
