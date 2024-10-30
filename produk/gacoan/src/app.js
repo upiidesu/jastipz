@@ -155,7 +155,7 @@ checkoutBtn.addEventListener('click', function(e) {
     const objData = Object.fromEntries(data);
     const message = formatMessage(objData);
     
-    window.open('http://wa.me/6281224238689?text=' + encodeURIComponent(message));
+    window.open('http://wa.me/6281916393062?text=' + encodeURIComponent(message));
     form.reset();
     checkoutBtn.disabled = true;
     checkoutBtn.classList.add('disabled');
