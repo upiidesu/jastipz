@@ -358,10 +358,10 @@ body {
 }
 .form-container input {
     background-color: var(--bg);
-    padding: 5px 7px;
+    padding: 4px 7px;
     border: 1px solid #969696;
     border-radius: 5px;
-    font-size: .7rem;
+    font-size: .8rem;
 }
 .form-container .checkoutBtn {
     padding: .3rem 1.3rem;
@@ -811,6 +811,10 @@ footer .container .copyright span {
         font-size: .9rem;
         padding-top: 2px;
         padding-left: 1px;
+    }
+
+    .form-container input {
+        font-size: 1.2rem;
     }
 
     /* Product */

@@ -39,10 +39,10 @@ function startCountdown(targetTime, countdownId, timeId) {
 }
 
 // Atur waktu target untuk setiap promo
-let targetTime1 = new Date(2024, 11, 20, 10, 0, 0); // 20 Oktober 2024, 10:00:00
-let targetTime2 = new Date(2024, 10, 13, 12, 0, 0); // Bulan diawali dari 0-11
-let targetTime3 = new Date(2024, 10, 20, 11, 30, 0); 
-let targetTime4 = new Date(2025, 0, 22, 14, 0, 0); 
+let targetTime1 = new Date(2024, 10, 1, 10, 0, 0); // 20 Oktober 2024, 10:00:00
+let targetTime2 = new Date(2024, 10, 1, 12, 0, 0); // Bulan diawali dari 0-11
+let targetTime3 = new Date(2024, 10, 2, 11, 30, 0); 
+let targetTime4 = new Date(2024, 10, 3, 14, 0, 0); 
 
 // Mulai countdown untuk masing-masing item promo
 startCountdown(targetTime1, 'countdown1', 'time1');

@@ -24,6 +24,20 @@ body {
     color: var(--text);
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background-color: #d1d1d1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ff8d50;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #df773f;
+}
+
 /* Overlay */
 .navbar .overlay {
     position: fixed;
