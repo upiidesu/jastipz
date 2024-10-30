@@ -155,10 +155,18 @@ checkoutBtn.addEventListener('click', function(e) {
     const objData = Object.fromEntries(data);
     const message = formatMessage(objData);
     
+    // Kirim ke wa
     window.open('http://wa.me/6281916393062?text=' + encodeURIComponent(message));
+
+    // Reset isi form
     form.reset();
     checkoutBtn.disabled = true;
     checkoutBtn.classList.add('disabled');
+
+    // Kosongkan isi cart di Alpine store
+    Alpine.store('cart').items = [];
+    Alpine.store('cart').quantity = 0;
+    Alpine.store('cart').total = 0;
 });
 
 // Format pesan WhatsApp
