@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container" id="container">
+            <!-- Daftar -->
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Buat Akun</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>atau gunakan email untuk mendaftar</span>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button>Daftar</button>
+                    <p>Sudah punya akun?<span id="masuk"> Masuk</span></p>
+                </form>
+            </div>
+
+            <!-- Login -->
+            <div class="form-container sign-in">
+                <form>
+                    <h1>Log In</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>atau gunakan email dan password</span>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <a href="#">Lupa Kata Sandi?</a>
+                    <button>Masuk</button>
+                    <p>Belum punya akun?<span id="daftar"> Daftar</span></p>
+                </form>
+            </div>
+
+            <!-- Toggle -->
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Selamat Datang Kembali!</h1>
+                        <p>Masuk menggunakan email dan password</p>
+                        <button class="hidden" id="login">Masuk</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Halo, Selamat Datang!</h1>
+                        <p>Daftar menggunakan email dan password</p>
+                        <button class="hidden" id="register">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
