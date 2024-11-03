@@ -31,7 +31,7 @@
                 <a href="../../index.html"><img src="../../img/logo.png" alt="Jastipz" width="300"></a>
                 <div class="navbar-link">
                     <a href="../../index.html"><i data-feather="home"></i><span>Beranda</span></a>
-                    <a href="#shop"><i data-feather="grid"></i><span>Semua Toko</span></a>
+                    <a href="../../store.html"><i data-feather="grid"></i><span>Semua Toko</span></a>
                     <a href="#log-in"><i data-feather="log-in"></i><span>Masuk</span></a>
                 </div>
             </div>
@@ -131,8 +131,8 @@
                     <!-- Detail Atas -->
                     <div class="detail-top">
                         <div class="title">
-                            <img src="../../img/promo-img/gacoan.webp" alt="Mie Gacoan">
-                            <p>Mie Gacoan</p>
+                            <img src="../../img/promo-img/wedrink.webp" alt="Wedrink">
+                            <p>Wedrink</p>
                         </div>
                         <div class="icons">
                             <p><i data-feather="shield"></i>Jaminan Layanan</p>
@@ -144,7 +144,7 @@
                     <span></span>
                     <!-- Detail Bawah -->
                     <div class="detail-bottom">
-                        <h4>Pesan Makanan atau Minuman di Mie Gacoan Hanya dalam Hitungan Detik!</h4>
+                        <h4>Pesan Ice Cream, Teh, atau Kopi di Wedrink Hanya dalam Hitungan Detik!</h4>
                         <p>1. Pilih Pesanan yang Anda Inginkan.</p>
                         <p>2. Kamu Dapat Memilih Beberapa Item dan Akan Dimasukkan ke Dalam Keranjang.</p>
                         <p>3. Masukkan Identitas Diri Anda.</p>
@@ -160,10 +160,10 @@
                     <h2>Pilih Pesanan</h2>
                 </div>
                 <div class="container">
-                    <!-- Card: Mie Suit -->
-                    <h3>Mie Suit</h3>
+                    <!-- Fruit Tea -->
+                    <h3>Fruit Tea</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in suit" :key="index">
+                        <template x-for="(item, index) in fruitTea" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -182,10 +182,10 @@
                         </template>
                     </div>
 
-                    <!-- Gacoan 0 - 4 -->
-                    <h3>Mie Gacoan Lv 0 - 4</h3>
+                    <!-- Sundae -->
+                    <h3>Sundae</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in gacoan04" :key="index">
+                        <template x-for="(item, index) in sundae" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -204,10 +204,10 @@
                         </template>
                     </div>
 
-                    <!-- Gacoan 6 - 8 -->
-                    <h3>Mie Gacoan Lv 6 - 8</h3>
+                    <!-- Milk Shake -->
+                    <h3>Milk Shake</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in gacoan68" :key="index">
+                        <template x-for="(item, index) in milkShake" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -226,10 +226,10 @@
                         </template>
                     </div>
 
-                    <!-- Hompimpa 0 - 4 -->
-                    <h3>Mie Hompimpa Lv 0 - 4</h3>
+                    <!-- Coffee -->
+                    <h3>Coffee</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in hompimpa04" :key="index">
+                        <template x-for="(item, index) in coffee" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -248,10 +248,10 @@
                         </template>
                     </div>
 
-                    <!-- Hompimpa 6 - 8 -->
-                    <h3>Mie Hompimpa Lv 6 - 8</h3>
+                    <!-- Milk Tea -->
+                    <h3>Milk Tea</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in hompimpa68" :key="index">
+                        <template x-for="(item, index) in milkTea" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -270,71 +270,6 @@
                         </template>
                     </div>
 
-                    <!-- Dimsum -->
-                    <h3>Dimsum</h3>
-                    <div class="card-container">
-                        <template x-for="(item, index) in dimsum" :key="index">
-                            <div class="card">
-                                <img :src="`img/${item.img}`" :alt="item.name">
-                                <div class="card-detail">
-                                    <h4 x-text="item.name"></h4>
-                                    <p>Disukai sebanyak <span x-text="item.likes"></span></p>
-                                    <div class="detail-price">
-                                        <p x-text="rupiah(item.price)"></p>
-                                        <span @click="$store.cart.add(item)" class="plus">
-                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../../img/feather-sprite.svg#plus" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-
-                    <!-- Es Buah -->
-                    <h3>Es Buah</h3>
-                    <div class="card-container">
-                        <template x-for="(item, index) in esBuah" :key="index">
-                            <div class="card">
-                                <img :src="`img/${item.img}`" :alt="item.name">
-                                <div class="card-detail">
-                                    <h4 x-text="item.name"></h4>
-                                    <p>Disukai sebanyak <span x-text="item.likes"></span></p>
-                                    <div class="detail-price">
-                                        <p x-text="rupiah(item.price)"></p>
-                                        <span @click="$store.cart.add(item)" class="plus">
-                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../../img/feather-sprite.svg#plus" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-
-                    <!-- Beverages -->
-                    <h3>Beverages Ice</h3>
-                    <div class="card-container">
-                        <template x-for="(item, index) in beverages" :key="index">
-                            <div class="card">
-                                <img :src="`img/${item.img}`" :alt="item.name">
-                                <div class="card-detail">
-                                    <h4 x-text="item.name"></h4>
-                                    <p>Disukai sebanyak <span x-text="item.likes"></span></p>
-                                    <div class="detail-price">
-                                        <p x-text="rupiah(item.price)"></p>
-                                        <span @click="$store.cart.add(item)" class="plus">
-                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <use href="../../img/feather-sprite.svg#plus" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
                 </div>
             </div>
         </div>
@@ -358,17 +293,17 @@
                         <div class="sitemap">
                             <h3>Peta Situs</h3>
                             <a href="../../index.html">Beranda</a>
-                            <a href="#">Semua Produk</a>
+                            <a href="../../store.html">Semua Produk</a>
                             <a href="#">Masuk</a>
                             <a href="#">Daftar</a>
                         </div>
                         <!-- Produk Lainnya -->
                         <div class="other">
                             <h3>Produk Lainnya</h3>
-                            <a href="#">Mie Gacoan</a>
+                            <a href="../gacoan/index.html">Mie Gacoan</a>
                             <a href="#">Wedrink</a>
-                            <a href="#">Wizzmie</a>
-                            <a href="#">Mixue</a>
+                            <a href="../wizzmie/index.html">Wizzmie</a>
+                            <a href="../mixue/index.html">Mixue</a>
                         </div>
                         <!-- Kontak -->
                         <div class="contact">

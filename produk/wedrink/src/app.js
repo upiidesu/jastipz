@@ -1,61 +1,48 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('products', () => ({
-        suit: [
-            { id: 1, name: 'Mi Suit', likes: '89', img: 'suit.jpeg', price: 15000 },
+        fruitTea: [
+            { id: 1, name: 'Six Grapes Fruit Tea', likes: '116', img: 'six-grapes.jpeg', price: 22000 },
+            { id: 2, name: 'Squeezed Lemonade', likes: '264', img: 'squeezed-lemonade.jpeg', price: 13000 },
+            { id: 3, name: 'Passion Fruit Pearl Tea', likes: '56', img: 'passion-fruit.jpeg', price: 24000 },
+            { id: 4, name: 'Blueberry Seed Tea', likes: '32', img: 'blueberry-seed.jpeg', price: 20000 },
+            { id: 5, name: 'Manggo Smoothies', likes: '88', img: 'mango-smoothies.jpeg', price: 26000 },
+            { id: 6, name: 'Grape Lemon Tea', likes: '217', img: 'grape-lemon-tea.jpeg', price: 13000 },
         ],
 
-        gacoan04: [
-            { id: 2, name: 'Mi Gacoan Lv 0', likes: '101', img: 'gacoan.jpeg', price: 15000 },
-            { id: 3, name: 'Mi Gacoan Lv 1', likes: '1,9RB', img: 'gacoan.jpeg', price: 15000 },
-            { id: 4, name: 'Mi Gacoan Lv 2', likes: '504', img: 'gacoan.jpeg', price: 15000 },
-            { id: 5, name: 'Mi Gacoan Lv 3', likes: '257', img: 'gacoan.jpeg', price: 15000 },
-            { id: 6, name: 'Mi Gacoan Lv 4', likes: '137', img: 'gacoan.jpeg', price: 15000 },
+        sundae: [
+            { id: 7, name: 'Super Jelly Sundae', likes: '195', img: 'jelly-sundae.jpeg', price: 17500 },
+            { id: 8, name: 'Strawberry Sundae', likes: '319', img: 'strawberry-sundae.jpeg', price: 17500 },
+            { id: 10, name: 'Blueberry Sundae', likes: '140', img: 'blueberry-sundae.jpeg', price: 17500 },
+            { id: 11, name: 'Chocolate Sundae', likes: '27', img: 'chocolate-oreo-sundae.jpeg', price: 17500 },
+            { id: 12, name: 'Matcha Sundae', likes: '64', img: 'matcha-sundae.jpeg', price: 17500 },
+            { id: 13, name: 'Brown Pearl Sundae', likes: '292', img: 'brown-sugar-sundae.jpeg', price: 17500 },
+            { id: 14, name: 'Peach Sundae', likes: '58', img: 'sundae.jpeg', price: 17500 },
+        ],
+        
+        milkShake: [
+            { id: 15, name: 'Boba Milkshake', likes: '24', img: 'milkshake.jpeg', price: 17500 },
+            { id: 16, name: 'Strawberry Milkshake', likes: '52', img: 'milkshake.jpeg', price: 17500 },
+            { id: 17, name: 'Raspberry Milkshake', likes: '71', img: 'milkshake.jpeg', price: 17500 },
+            { id: 18, name: 'Red Matcha Milkshake', likes: '43', img: 'milkshake.jpeg', price: 17500 },
+            { id: 19, name: 'Moca Milkshake', likes: '82', img: 'milkshake.jpeg', price: 17500 },
         ],
 
-        gacoan68: [
-            { id: 7, name: 'Mi Gacoan Lv 6', likes: '124', img: 'gacoan.jpeg', price: 16000 },
-            { id: 8, name: 'Mi Gacoan Lv 7', likes: '57', img: 'gacoan.jpeg', price: 16000 },
-            { id: 10, name: 'Mi Gacoan Lv 8', likes: '14', img: 'gacoan.jpeg', price: 16000 },
+        coffee: [
+            { id: 20, name: 'Coffee Latte', likes: '68', img: 'coffe-latte.jpeg', price: 14300 },
+            { id: 21, name: 'Iced Americano Coffee', likes: '63', img: 'iced-americano.jpeg', price: 14300 },
+            { id: 22, name: 'Cappucino', likes: '39', img: 'coffe-latte.jpeg', price: 14300 },
         ],
-
-        hompimpa04: [
-            { id: 11, name: 'Mi Hompimpa Lv 0', likes: '45', img: 'hompimpa.jpeg', price: 15000 },
-            { id: 12, name: 'Mi Hompimpa Lv 1', likes: '559', img: 'hompimpa.jpeg', price: 15000 },
-            { id: 13, name: 'Mi Hompimpa Lv 2', likes: '75', img: 'hompimpa.jpeg', price: 15000 },
-            { id: 14, name: 'Mi Hompimpa Lv 3', likes: '147', img: 'hompimpa.jpeg', price: 15000 },
-            { id: 15, name: 'Mi Hompimpa Lv 4', likes: '93', img: 'hompimpa.jpeg', price: 15000 },
-        ],
-
-        hompimpa68: [
-            { id: 16, name: 'Mi Hompimpa Lv 6', likes: '49', img: 'hompimpa.jpeg', price: 16000 },
-            { id: 17, name: 'Mi Hompimpa Lv 7', likes: '36', img: 'hompimpa.jpeg', price: 16000 },
-            { id: 18, name: 'Mi Hompimpa Lv 8', likes: '20', img: 'hompimpa.jpeg', price: 16000 },
-        ],
-
-        dimsum: [
-            { id: 19, name: 'Pangsit Goreng', likes: '291', img: 'pangsit-goreng.jpeg', price: 14000 },
-            { id: 20, name: 'Lumpia Udang', likes: '659', img: 'lumpia-udang.jpeg', price: 13000 },
-            { id: 21, name: 'Udang Keju', likes: '1,7RB', img: 'udang-keju.jpeg', price: 13000 },
-            { id: 22, name: 'Udang Rambutan', likes: '871', img: 'udang-rambutan.jpeg', price: 13000 },
-            { id: 23, name: 'Siomay Ayam', likes: '735', img: 'siomay-ayam.jpeg', price: 13000 },
-        ],
-
-        esBuah: [
-            { id: 24, name: 'Es Petak Umpet', likes: '35', img: 'petak-umpet.jpeg', price: 13000 },
-            { id: 25, name: 'Es Sluku Bathok', likes: '69', img: 'sluku-bathok.jpeg', price: 10000 },
-            { id: 26, name: 'Es Teklek', likes: '64', img: 'teklek.jpeg', price: 10000 },
-            { id: 27, name: 'Es Gobak Sodor', likes: '217', img: 'gobak-sodor.jpeg', price: 13000 },
-        ],
-
-        beverages: [
-            { id: 28, name: 'Es Teh', likes: '195', img: 'teh.jpeg', price: 7000 },
-            { id: 29, name: 'Orange', likes: '67', img: 'orange.jpeg', price: 9000 },
-            { id: 30, name: 'Lemon Tea', likes: '118', img: 'lemon-tea.jpeg', price: 11000 },
-            { id: 31, name: 'Teh Tarik', likes: '23', img: 'teh-tarik.jpeg', price: 11000 },
-            { id: 32, name: 'Chocoan Ice', likes: '38', img: 'chocoan-ice.jpeg', price: 12000 },
-            { id: 33, name: 'Vanilla Latte', likes: '26', img: 'vanilla-latte.jpeg', price: 12000 },
-            { id: 34, name: 'Thai Tea', likes: '223', img: 'thai-tea-ori.jpeg', price: 12000 },
-            { id: 35, name: 'Green Thai Tea', likes: '162', img: 'green-thai-tea.jpeg', price: 12000 },
+        
+        milkTea: [
+            { id: 23, name: 'Original Milk Tea', likes: '735', img: 'milktea.jpeg', price: 13000 },
+            { id: 24, name: 'Coconut Jelly Milktea', likes: '35', img: 'milktea.jpeg', price: 13000 },
+            { id: 25, name: 'Coconut Jelly Large', likes: '69', img: 'milktea.jpeg', price: 10000 },
+            { id: 26, name: 'Brown Sugar Medium', likes: '64', img: 'milktea.jpeg', price: 10000 },
+            { id: 27, name: 'Brown Sugar Large', likes: '217', img: 'milktea.jpeg', price: 13000 },
+            { id: 28, name: 'Milktea 2 Topping M', likes: '195', img: 'milktea.jpeg', price: 7000 },
+            { id: 29, name: 'Milktea 2 Topping L', likes: '67', img: 'milktea.jpeg', price: 9000 },
+            { id: 30, name: 'Milktea 3 Topping', likes: '118', img: 'milktea.jpeg', price: 11000 },
+            { id: 31, name: 'Jelly Milktea', likes: '23', img: 'milktea.jpeg', price: 11000 },
         ],
     }));
 
