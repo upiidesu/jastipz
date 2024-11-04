@@ -26,16 +26,6 @@ const masukBtn = document.querySelector('.btn.masuk');
 const loaderDaftar = daftarBtn.querySelector('.loader');
 const loaderMasuk = masukBtn.querySelector('.loader');
 
-// Fungsi untuk menambahkan kelas active dengan delay pada daftar
-daftarBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    loaderDaftar.classList.add('active');
-    
-    setTimeout(() => {
-        loaderDaftar.classList.remove('active');
-    }, 1000);
-});
-
 // Fungsi untuk menampilkan loader dan mengalihkan ke halaman lain pada masuk
 masukBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -45,4 +35,26 @@ masukBtn.addEventListener('click', (e) => {
         loaderMasuk.classList.remove('active');
         window.location.href = "../index.html";
     }, 1000);
+});
+
+const notif = document.querySelector('.notif');
+// Fungsi untuk menambahkan kelas active dengan delay pada daftar
+daftarBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    loaderDaftar.classList.add('active');
+    
+    setTimeout(() => {
+        loaderDaftar.classList.remove('active');
+        notif.classList.add('active');
+        
+        // Menghilangkan class active pada notif
+        setTimeout(() => {
+            notif.classList.remove('active');
+        }, 5000);
+    }, 1000);
+});
+
+const notifBtn = document.querySelector('.notif-btn');
+notifBtn.addEventListener('click', (e) => {
+    notif.classList.remove('active');
 });

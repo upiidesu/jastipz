@@ -13,6 +13,7 @@ body{
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container{
@@ -246,6 +247,73 @@ body{
     66% {box-shadow: 10px 0 #fff2,-10px 0 #fff; background: #fff2}
     100%{box-shadow: 10px 0 #fff2,-10px 0 #fff; background: #fff }
 }
+
+/* Notif */
+.notif::before {
+    content: '';
+    display: block;
+    width: .5rem;
+    height: 2.2rem;
+    background-color: #f27531;
+    position: absolute;
+    left: 1px;
+    border-radius: .2rem 0 0 .2rem;
+}
+.notif {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    transform: translateX(100%);
+    background-color: #f4874c;
+    color: #fff;
+    width: 15.5rem;
+    height: 2.2rem;
+    padding-left: 1.5rem;
+    font-size: .9rem;
+    border-radius: .2rem;
+}
+
+.notif.active {
+    right: 1rem;
+    animation: notif 4s forwards; /* 2s masuk, 2s bertahan, 2s keluar */
+}
+@keyframes notif {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    15% {
+        transform: translateX(-5%);
+        opacity: 1;
+    }
+    25%, 50%, 75% {
+        transform: translateX(0);
+    }
+    85% {
+        transform: translateX(-5%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+.notif span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f27531;
+    width: 2rem;
+    height: 2.2rem;
+    border-radius: 0 .2rem .2rem 0;
+    cursor: pointer;
+}
+
 
 /* Query */
 /* Responsive adjustments for tablets */
