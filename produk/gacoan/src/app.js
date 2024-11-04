@@ -156,7 +156,7 @@ checkoutBtn.addEventListener('click', function(e) {
     const message = formatMessage(objData);
     
     // Kirim ke wa
-    window.open('http://wa.me/6281916393062?text=' + encodeURIComponent(message));
+    window.open('http://wa.me/6281224238689?text=' + encodeURIComponent(message));
 
     // Reset isi form
     form.reset();
