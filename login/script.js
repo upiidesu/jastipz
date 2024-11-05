@@ -33,6 +33,7 @@ masukBtn.addEventListener('click', (e) => {
     
     setTimeout(() => {
         loaderMasuk.classList.remove('active');
+        loginForm.reset();
         window.location.href = "../index.html";
     }, 1000);
 });
@@ -46,6 +47,7 @@ daftarBtn.addEventListener('click', (e) => {
     setTimeout(() => {
         loaderDaftar.classList.remove('active');
         notif.classList.add('active');
+        signupForm.reset();
         
         // Menghilangkan class active pada notif
         setTimeout(() => {
@@ -58,3 +60,7 @@ const notifBtn = document.querySelector('.notif-btn');
 notifBtn.addEventListener('click', (e) => {
     notif.classList.remove('active');
 });
+
+// Kosongkan Form
+const signupForm = document.querySelector('#signupForm');
+const loginForm = document.querySelector('#loginForm');
