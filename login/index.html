@@ -15,70 +15,73 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <div class="container" id="container">
-        <!-- Daftar -->
-        <div class="form-container sign-up">
-            <form id="signupForm">
-                <h1>Buat Akun</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>atau gunakan email untuk mendaftar</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button class="btn daftar disabled">Daftar
-                    <div class="loader"></div>
-                </button>
-                <p>Sudah punya akun?<span id="masuk"> Masuk</span></p>
-            </form>
-        </div>
-
-        <!-- Login -->
-        <div class="form-container sign-in">
-            <form id="loginForm">
-                <h1>Log In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>atau gunakan email dan password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Lupa Kata Sandi?</a>
-                <button class="btn masuk">Masuk
-                    <div class="loader"></div>
-                </button>
-                <p>Belum punya akun?<span id="daftar"> Daftar</span></p>
-            </form>
-        </div>
-
-        <!-- Toggle -->
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Selamat Datang Kembali!</h1>
-                    <p>Masuk menggunakan email dan password</p>
-                    <button class="hidden" id="login">Masuk</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Halo, Selamat Datang!</h1>
-                    <p>Daftar menggunakan email dan password</p>
-                    <button class="hidden" id="register">Daftar</button>
+    <section class="container-content">
+        <div class="container" id="container">
+            <!-- Daftar -->
+            <div class="form-container sign-up">
+                <form id="signupForm">
+                    <h1>Buat Akun</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>atau gunakan email untuk mendaftar</span>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button class="btn daftar disabled">Daftar
+                        <div class="loader"></div>
+                    </button>
+                    <p>Sudah punya akun?<span id="masuk"> Masuk</span></p>
+                </form>
+            </div>
+    
+            <!-- Login -->
+            <div class="form-container sign-in">
+                <form id="loginForm">
+                    <h1>Log In</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>atau gunakan email dan password</span>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <a href="#">Lupa Kata Sandi?</a>
+                    <button class="btn masuk">Masuk
+                        <div class="loader"></div>
+                    </button>
+                    <p>Belum punya akun?<span id="daftar"> Daftar</span></p>
+                </form>
+            </div>
+    
+            <!-- Toggle -->
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Selamat Datang Kembali!</h1>
+                        <p>Masuk menggunakan email dan password</p>
+                        <button class="hidden" id="login">Masuk</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Halo, Selamat Datang!</h1>
+                        <p>Daftar menggunakan email dan password</p>
+                        <button class="hidden" id="register">Daftar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <p class="notif">
-        <i class="fa-regular fa-circle-check"></i>Akun berhasil dibuat 
-        <span class="notif-btn"><i class="fa-solid fa-xmark"></i></span>
-    </p>
+        <p class="notif">
+            <i class="fa-regular fa-circle-check"></i>Akun berhasil dibuat 
+            <span class="notif-btn"><i class="fa-solid fa-xmark"></i></span>
+        </p>
+    </section>
+
 
     <script src="script.js"></script>
 </body>
