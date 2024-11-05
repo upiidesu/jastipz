@@ -366,6 +366,10 @@ body {
         display: none;
     }
 
+    .container form {
+        padding: 1.8rem;
+    }
+
     .container form p {
         display: inline-block;
         font-size: .8rem;
