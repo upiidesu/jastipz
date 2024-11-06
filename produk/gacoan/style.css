@@ -391,7 +391,7 @@ body {
 }
 
 .row .product-name {
-    max-width: 34%;
+    max-width: 30%;
     height: auto;
     display: inline-block;
     color: var(--text);
@@ -454,7 +454,7 @@ body {
 
 /* Product Item */
 .product .product-item {
-    max-width: 64.5%;
+    max-width: 68.5%;
     padding: 1.5rem;
     margin-left: auto;
     background-color: #f0f0f0;
