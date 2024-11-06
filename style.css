@@ -500,18 +500,7 @@ footer .container .copyright span {
 
 /* ======================================================= */
 /* Query */
-/* Desktop */
-@media (min-width: 1400) {
-    html {
-        font-size: 110%;
-    }
 
-    .product .product-row .product-item {
-        flex: 1 1 18rem;
-    }
-}
-
-/* ====================================================== */
 /* Tablet */
 @media (max-width: 758px) {
     html {
@@ -579,11 +568,29 @@ footer .container .copyright span {
     }
 
     .promo h1 {
-        font-size: 1.3rem; /* Sesuaikan ukuran judul di layar kecil */
+        font-size: 1.4rem;
+    }
+
+    .promo .promo-container h2 {
+        font-size: 1.4rem;
+    }
+    .promo .promo-container p {
+        font-size: 1rem;
+    }
+    .promo .promo-container span {
+        font-size: 1rem;
+        padding: 0 1.2rem;
+    }
+    .promo .promo-container .discount {
+        font-size: 1.1rem;
     }
 
     .product {
         padding: 0 3%;
+    }
+
+    .product a h2 {
+        font-size: 1.4rem;
     }
 
     .product .product-row {
