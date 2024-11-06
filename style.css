@@ -654,4 +654,18 @@ footer .container .copyright span {
     .product .product-row .product-item .overlay p {
         font-size: 1.1rem;
     }
+
+    footer .footer-content .description p {
+        font-size: 1.1rem !important;
+        font-weight: 500;
+    }
+
+    footer .copyright {
+        flex-direction: column;
+        margin-top: 1.3rem !important;
+    }
+
+    footer .copyright h3, footer .copyright a {
+        font-size: 1.3rem !important;
+    }
 }
