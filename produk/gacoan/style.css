@@ -835,7 +835,20 @@ footer .container .copyright span {
         max-width: 100%;
     }
 
-    
+    .product .product-name .detail-top img {
+        width: 6rem !important;
+    }
+    .product .product-name .detail-top .title p {
+        font-size: 1.4rem;
+    }
+    .product .product-name .detail-top .icons p,
+    .product .product-name .detail-bottom p {
+        font-size: 1rem;
+    }
+    .product .product-name .detail-bottom h4 {
+        font-size: 1.1rem;
+    }
+
     .product .product-item .title span {
         width: 1.6rem;
         height: 1.6rem;
