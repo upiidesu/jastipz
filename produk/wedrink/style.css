@@ -843,10 +843,10 @@ footer .container .copyright span {
     }
     .product .product-name .detail-top .icons p,
     .product .product-name .detail-bottom p {
-        font-size: 1rem;
+        font-size: .9rem;
     }
     .product .product-name .detail-bottom h4 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .product .product-item .title span {
