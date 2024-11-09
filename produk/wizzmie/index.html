@@ -131,8 +131,8 @@
                     <!-- Detail Atas -->
                     <div class="detail-top">
                         <div class="title">
-                            <img src="../../img/promo-img/wedrink.webp" alt="Wedrink">
-                            <p>Wedrink</p>
+                            <img src="../../img/promo-img/wizzmie.webp" alt="Wedrink">
+                            <p>Wizzmie</p>
                         </div>
                         <div class="icons">
                             <p><i data-feather="shield"></i>Jaminan Layanan</p>
@@ -144,7 +144,7 @@
                     <span></span>
                     <!-- Detail Bawah -->
                     <div class="detail-bottom">
-                        <h4>Pesan Ice Cream, Teh, atau Kopi di Wedrink Hanya dalam Hitungan Detik!</h4>
+                        <h4>Pesan Makanan atau Minuman di Wizzmie Hanya dalam Hitungan Detik!</h4>
                         <p>1. Pilih Pesanan yang Anda Inginkan.</p>
                         <p>2. Kamu Dapat Memilih Beberapa Item dan Akan Dimasukkan ke Dalam Keranjang.</p>
                         <p>3. Masukkan Identitas Diri Anda.</p>
@@ -160,10 +160,10 @@
                     <h2>Pilih Pesanan</h2>
                 </div>
                 <div class="container">
-                    <!-- Fruit Tea -->
-                    <h3>Fruit Tea</h3>
+                    <!-- Mie Manja -->
+                    <h3>Mie Manja</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in fruitTea" :key="index">
+                        <template x-for="(item, index) in manja" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -182,10 +182,10 @@
                         </template>
                     </div>
 
-                    <!-- Sundae -->
-                    <h3>Sundae</h3>
+                    <!-- Mie Goyang Cabe -->
+                    <h3>Mie Goyang Cabe 1-4</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in sundae" :key="index">
+                        <template x-for="(item, index) in goyangCabe" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -204,10 +204,33 @@
                         </template>
                     </div>
 
-                    <!-- Milk Shake -->
-                    <h3>Milk Shake</h3>
+                    <!-- Mie Goyang Lv 1-6 -->
+                    <h3>Mie Goyang Lv 1-6</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in milkShake" :key="index">
+                        <template x-for="(item, index) in goyangLevel" :key="index">
+                            <div class="card">
+                                <img :src="`img/${item.img}`" :alt="item.name">
+                                <div class="card-detail">
+                                    <h4 x-text="item.name"></h4>
+                                    <span class="hidden" x-text="item.level"></span>
+                                    <p>Terjual <span x-text="item.likes"></span></p>
+                                    <div class="detail-price">
+                                        <p x-text="rupiah(item.price)"></p>
+                                        <span @click="$store.cart.add(item)" class="plus">
+                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <use href="../../img/feather-sprite.svg#plus" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Mie Disko Cabe -->
+                    <h3>Mie Disko Cabe 1-9</h3>
+                    <div class="card-container">
+                        <template x-for="(item, index) in diskoCabe" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -226,10 +249,33 @@
                         </template>
                     </div>
 
-                    <!-- Coffee -->
-                    <h3>Coffee</h3>
+                    <!-- Mie Disko Level -->
+                    <h3>Mie Disko Lv 1-5</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in coffee" :key="index">
+                        <template x-for="(item, index) in diskoLevel" :key="index">
+                            <div class="card">
+                                <img :src="`img/${item.img}`" :alt="item.name">
+                                <div class="card-detail">
+                                    <h4 x-text="item.name"></h4>
+                                    <span class="hidden" x-text="item.level"></span>
+                                    <p>Terjual <span x-text="item.likes"></span></p>
+                                    <div class="detail-price">
+                                        <p x-text="rupiah(item.price)"></p>
+                                        <span @click="$store.cart.add(item)" class="plus">
+                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <use href="../../img/feather-sprite.svg#plus" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Dimsum -->
+                    <h3>Dimsum</h3>
+                    <div class="card-container">
+                        <template x-for="(item, index) in dimsum" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -248,10 +294,76 @@
                         </template>
                     </div>
 
-                    <!-- Milk Tea -->
-                    <h3>Milk Tea</h3>
+                    <!-- Sushi -->
+                    <h3>Genk Sushi</h3>
                     <div class="card-container">
-                        <template x-for="(item, index) in milkTea" :key="index">
+                        <template x-for="(item, index) in sushi" :key="index">
+                            <div class="card">
+                                <img :src="`img/${item.img}`" :alt="item.name">
+                                <div class="card-detail">
+                                    <h4 x-text="item.name"></h4>
+                                    <p>Terjual <span x-text="item.likes"></span></p>
+                                    <div class="detail-price">
+                                        <p x-text="rupiah(item.price)"></p>
+                                        <span @click="$store.cart.add(item)" class="plus">
+                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <use href="../../img/feather-sprite.svg#plus" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Ice Bar -->
+                    <h3>Ice Bar</h3>
+                    <div class="card-container">
+                        <template x-for="(item, index) in iceBar" :key="index">
+                            <div class="card">
+                                <img :src="`img/${item.img}`" :alt="item.name">
+                                <div class="card-detail">
+                                    <h4 x-text="item.name"></h4>
+                                    <p>Terjual <span x-text="item.likes"></span></p>
+                                    <div class="detail-price">
+                                        <p x-text="rupiah(item.price)"></p>
+                                        <span @click="$store.cart.add(item)" class="plus">
+                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <use href="../../img/feather-sprite.svg#plus" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Frappe Ice -->
+                    <h3>Frappe Ice</h3>
+                    <div class="card-container">
+                        <template x-for="(item, index) in frappeIce" :key="index">
+                            <div class="card">
+                                <img :src="`img/${item.img}`" :alt="item.name">
+                                <div class="card-detail">
+                                    <h4 x-text="item.name"></h4>
+                                    <p>Terjual <span x-text="item.likes"></span></p>
+                                    <div class="detail-price">
+                                        <p x-text="rupiah(item.price)"></p>
+                                        <span @click="$store.cart.add(item)" class="plus">
+                                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <use href="../../img/feather-sprite.svg#plus" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Rice Bowl -->
+                    <h3>Rice Bowl</h3>
+                    <div class="card-container">
+                        <template x-for="(item, index) in riceBowl" :key="index">
                             <div class="card">
                                 <img :src="`img/${item.img}`" :alt="item.name">
                                 <div class="card-detail">
@@ -294,15 +406,15 @@
                             <h3>Peta Situs</h3>
                             <a href="../../index.html">Beranda</a>
                             <a href="../../store.html">Semua Produk</a>
-                            <a href="#">Masuk</a>
-                            <a href="#">Daftar</a>
+                            <a href="../../login/index.html">Masuk</a>
+                            <a href="../../login/index.html">Daftar</a>
                         </div>
                         <!-- Produk Lainnya -->
                         <div class="other">
                             <h3>Produk Lainnya</h3>
                             <a href="../gacoan/index.html">Mie Gacoan</a>
-                            <a href="#">Wedrink</a>
-                            <a href="../wizzmie/index.html">Wizzmie</a>
+                            <a href="../wedrink/index.html">Wedrink</a>
+                            <a href="#">Wizzmie</a>
                             <a href="../mixue/index.html">Mixue</a>
                         </div>
                         <!-- Kontak -->
